@@ -1,5 +1,2 @@
 # symfony_ecommerce
-# symfony_ecommerce
-# symfony_ecommerce
-# symfony_ecommerce
-# symfony_ecommerce
+Simple ecommerce platform built with Symfony
