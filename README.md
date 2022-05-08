@@ -105,3 +105,4 @@ symfony console make:controller
 ```
 
 ## Create product filter in products view
+Search (class), SearchType
