@@ -71,3 +71,11 @@ symfony console make:form
 
 ## Quick template polishing with css
 base.html.twig
+
+## Creating Admin interface with EasyAdmin
+DashboardController / UserCrudController
+```
+composer require easycorp/easyadmin-bundle
+symphony console make:admin:dashboard
+symfony console make:admin:crud
+```
