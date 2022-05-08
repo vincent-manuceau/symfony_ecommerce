@@ -17,19 +17,30 @@ apt install symfony-cli
 ```
 
 ## Creation Commands (second commit)
+
+
+
+### Creating project (Home)
 HomeController
-AccountController / UserRepository
-RegisterController / RegisterType
 ```
 git config --global user.email "vincent-manuceau"
 symfony new laboutiquefrancaise --full
 cd laboutiquefrancaise/
 symfony server:start
+```
+### Account + User logic + Doctrine migration (creating BDD schema...)
+AccountController / UserRepository
+```
 symfony console make:controller
 symfony console make:user
 symfony console doctrine:database:create
 symfony console make:migration
 symfony console doctrine:migrations:migrate
+```
+
+### Register new user + Doctrine migration (updating BDD schema)
+RegisterController / RegisterType
+```
 symfony console make:controller
 symfony console doctrine:migrations:sync-metadata-storage
 symfony console make:form
