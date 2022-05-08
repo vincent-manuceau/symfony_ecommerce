@@ -17,6 +17,9 @@ apt install symfony-cli
 ```
 
 ## Creation Commands (second commit)
+HomeController
+AccountController / UserRepository
+RegisterController / RegisterType
 ```
 git config --global user.email "vincent-manuceau"
 symfony new laboutiquefrancaise --full
@@ -36,12 +39,22 @@ symfony console doctrine:migrations:migrate
 ```
 
 ## Adding user Login/Logout
+SecurityController / LoginFormAuthenticator
 ```
 symfony console make:auth
 ```
 
 ## Adding user account space + login/logout logic + header links
+AccountController
 ```
 symfony console make:controller
 symfony console debug:router
 ```
+
+## User Password Update
+AccountPasswordController / ChangePasswordType
+```
+symfony console make:controller
+symfony console make:form
+```
+
