@@ -24,8 +24,8 @@ apt install symfony-cli
 HomeController
 ```
 git config --global user.email "vincent-manuceau"
-symfony new laboutiquefrancaise --full
-cd laboutiquefrancaise/
+symfony new laboutiquecreole --full
+cd laboutiquecreole/
 symfony server:start
 ```
 ### Account + User Entity + Doctrine migration (creating BDD schema...)
@@ -88,4 +88,13 @@ symfony console make:migration
 symfony console doctrine:migration:migrate
 symfony console make:admin:crud
 ```
+
+## Product Entity + Admin Mapping
+```
+symfony console make:entity
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+symfony console make:admin:crud
+```
+Images are uploaded in public/uploads/
 
