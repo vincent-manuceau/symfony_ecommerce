@@ -98,3 +98,10 @@ symfony console make:admin:crud
 ```
 Images are uploaded in public/uploads/
 
+## Create products view + Single product view
+ProductController
+```
+symfony console make:controller
+```
+
+## Create product filter in products view
