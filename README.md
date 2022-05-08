@@ -58,3 +58,5 @@ symfony console make:controller
 symfony console make:form
 ```
 
+## Quick template polishing with css
+base.html.twig
