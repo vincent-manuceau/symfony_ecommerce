@@ -28,7 +28,7 @@ symfony new laboutiquefrancaise --full
 cd laboutiquefrancaise/
 symfony server:start
 ```
-### Account + User logic + Doctrine migration (creating BDD schema...)
+### Account + User Entity + Doctrine migration (creating BDD schema...)
 AccountController / UserRepository
 ```
 symfony console make:controller
@@ -79,3 +79,13 @@ composer require easycorp/easyadmin-bundle
 symphony console make:admin:dashboard
 symfony console make:admin:crud
 ```
+
+## Categories Entity + Admin Mapping
+CategoryCrudController
+```
+symfony console make:entity
+symfony console make:migration
+symfony console doctrine:migration:migrate
+symfony console make:admin:crud
+```
+
