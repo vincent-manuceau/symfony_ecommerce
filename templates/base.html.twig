@@ -55,6 +55,9 @@
                 {% else %}
                 <a href="{{ path('app_login') }}">Connexion</a> | <a href="{{ path('register') }}">Inscription</a>
                 {% endif %}
+                <a href="{{ path('cart') }}" alt="Mon Panier">
+                    <img src="{{ asset('assets/img/shopping-cart.png') }}" alt="Mon panier" class="cart-icon">
+                </a>
             </div>
             <!--form class="form-inline mt-2 mt-md-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Votre Recherche" aria-label="Search">

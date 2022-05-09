@@ -112,3 +112,5 @@ Cart (class), CartController
 ```
 symfony console make:controller
 ```
+
+## Increase/Decrease/Delete product from cart
