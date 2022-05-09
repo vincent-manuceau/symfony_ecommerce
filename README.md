@@ -106,3 +106,9 @@ symfony console make:controller
 
 ## Create product filter in products view
 Search (class), SearchType
+
+## Add to Cart with SessionInterface
+Cart (class), CartController
+```
+symfony console make:controller
+```
