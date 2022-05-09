@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Panier - La Boutique Creole{% endblock %}
+
+{% block content %}
+<h1>Mon Panier</h1>
+    Voici l'ensemble des produits de votre panier.
+
+
+    <table class="table mt-3">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Produit</th>
+            <th scope="col">Quantite</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% set total = null %}
+        {% set nb_products = null %}
+        {% for product in cart %}
+        <tr>
+            <th scope="row">
+                <img src="/uploads/{{ product.product.illustration }}"
+                     alt="{{ product.product.name }}"
+                     height="75px"><br/>
+
+            </th>
+            <td>
+                {{ product.product.name }}<br/>
+                <small>{{ product.product.subtitle }}</small>
+
+            </td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ (product.product.price/100) |number_format(2,',','.') }} &euro;</td>
+            <td>{{ ((product.product.price * product.quantity)/100)|number_format(2,',','.') }} &euro;</td>
+        </tr>
+            {% set total = total + product.product.price * product.quantity %}
+            {% set nb_products = nb_products + product.quantity %}
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-right mb-5">
+        <b>Nombre de produits : </b> {{ nb_products }}<br/>
+        <b>Total a payer : </b>{{ ((total)/100)|number_format(2,',','.') }} &euro;<br/>
+        <a href="" class="btn btn-success btn-block">Valider mon panier</a>
+    </div>
+{% endblock %}
