@@ -144,10 +144,18 @@ symfony console make:controller
 symfony console make:form
 ```
 
-## Sales Tunnel : store order + order details
+## Sales Tunnel : store order + order details + order page + confirmation
 Update Orders entity (add isPaid)
 ```
 symfony console make:entity
 symfony console make:migration
 symfony console doctrine:migrations:migrate
- ```
+```
+
+## Admin display orders
+```
+symfony console make:admin:crud
+sudo apt update
+sudo apt search php-intl
+sudo apt install php-intl
+```
