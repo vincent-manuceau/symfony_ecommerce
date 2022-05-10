@@ -143,3 +143,11 @@ symfony console doctrine:migrations:migrate
 symfony console make:controller
 symfony console make:form
 ```
+
+## Sales Tunnel : store order + order details
+Update Orders entity (add isPaid)
+```
+symfony console make:entity
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+ ```
