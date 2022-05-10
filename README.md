@@ -114,3 +114,14 @@ symfony console make:controller
 ```
 
 ## Increase/Decrease/Delete product from cart
+
+
+## User Addresses Entity
+```
+AddressRepository / AccountAddressController / AddressType
+symfony console make:entity
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+symfony console make:controller
+symfony console make:form
+``` 	
