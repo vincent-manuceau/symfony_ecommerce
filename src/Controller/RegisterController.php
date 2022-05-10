@@ -37,6 +37,8 @@ class RegisterController extends AbstractController
     		$this->entityManager->persist($user);
     		$this->entityManager->flush();
 
+            $this->redirect('account');
+
     	}
 
       return $this->render('register/index.html.twig', [

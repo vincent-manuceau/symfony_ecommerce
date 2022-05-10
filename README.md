@@ -138,3 +138,8 @@ symfony console make:migration
 symfony console doctrine:migrations:migrate
 ```
 
+## Creating Sales tunnel : OrderController + Form
+```
+symfony console make:controller
+symfony console make:form
+```
