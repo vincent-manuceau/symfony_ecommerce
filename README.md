@@ -167,3 +167,11 @@ StripeController
 composer require stripe/stripe-php
 symfony console make:controller
 ```
+
+## Add Carrier to Stripe Payment
+Add reference to Order Entity
+```
+symfony console make:entity
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+```
