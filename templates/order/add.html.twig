@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block javascript %}
+<script src="https://js.stripe.com/v3/"></script>
+{% endblock %}
+
 {% block title %}Mon recap - La Boutique Creole{% endblock %}
 
 {% block content %}
@@ -52,7 +56,34 @@
             <strong>Livraison :</strong> {{ ((carrier.price))|number_format(2,',','.') }} &euro;
             <hr>
             <strong>Total :</strong> {{ (((total)/100)+carrier.price)|number_format(2,',','.') }} &euro;
-            <a href="" class="btn btn-success btn-block mt-3">Payer | {{ (((total)/100)+carrier.price)|number_format(2,',','.') }} &euro;</a>
+            <a id="checkout-button" class="btn btn-success btn-block mt-3">Payer | {{ (((total)/100)+carrier.price)|number_format(2,',','.') }} &euro;</a>
         </div>
     </div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    var stripe = Stripe("pk_test_51I0WTOKB7g4ZulaSL7MuJ1KLk93GY4FeH4EAAmddk42dLVy0XngyGd14rfQWLcTBTZWtssgr7eHb9lwh64BviAEJ00lYeMXeg4");
+    var checkoutButton = document.getElementById("checkout-button");
+    checkoutButton.addEventListener("click",function(){
+        fetch("/commande/create-session",{
+                method : 'POST'
+        })
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(session){
+                stripe.redirectToCheckout({ sessionId: session.id});
+            })
+            .then(function(result){
+                if(result.error){
+                    alert(result.error.message);
+                }
+            })
+            .catch(function(error){
+                console.error("Error:",error);
+            });
+    });
+
+</script>
 {% endblock %}

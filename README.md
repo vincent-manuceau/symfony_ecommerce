@@ -159,3 +159,11 @@ sudo apt update
 sudo apt search php-intl
 sudo apt install php-intl
 ```
+
+
+## Add Stripe Payment
+StripeController
+``` 
+composer require stripe/stripe-php
+symfony console make:controller
+```
