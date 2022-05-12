@@ -191,3 +191,8 @@ AccountOrderController
 ```
 symfony console make:controller
 ```
+
+## Mail management with MailJet
+```
+composer require mailjet/mailjet-apiv3-php
+```
