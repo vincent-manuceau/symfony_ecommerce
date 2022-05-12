@@ -175,3 +175,13 @@ symfony console make:entity
 symfony console make:migration
 symfony console doctrine:migrations:migrate
 ```
+
+## Payment Success and Payment Error Pages 
+Add stripeSessionId to Order entity
+OrderSuccessController, OrderCancelController
+```
+symfony console make:entity
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+symfony console make:controller
+```

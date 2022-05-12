@@ -20,7 +20,7 @@
             <div class="form-check">
                 {{ carrier.name }}<br/>
                 {{ carrier.description }}<br/>
-                {{ ((carrier.price))|number_format(2,',','.') }} &euro;
+                {{ ((carrier.price/100))|number_format(2,',','.') }} &euro;
             </div>
 
         </div>
@@ -53,10 +53,10 @@
             </div>
             <hr>
             <strong>Sous-Total :</strong> {{ ((total)/100)|number_format(2,',','.') }} &euro;<br/>
-            <strong>Livraison :</strong> {{ ((carrier.price))|number_format(2,',','.') }} &euro;
+            <strong>Livraison :</strong> {{ ((carrier.price/100))|number_format(2,',','.') }} &euro;
             <hr>
-            <strong>Total :</strong> {{ (((total)/100)+carrier.price)|number_format(2,',','.') }} &euro;
-            <a id="checkout-button" class="btn btn-success btn-block mt-3">Payer | {{ (((total)/100)+carrier.price)|number_format(2,',','.') }} &euro;</a>
+            <strong>Total :</strong> {{ (((total)/100)+carrier.price/100)|number_format(2,',','.') }} &euro;
+            <a id="checkout-button" class="btn btn-success btn-block mt-3">Payer {{ (((total)/100)+carrier.price/100)|number_format(2,',','.') }} &euro;</a>
         </div>
     </div>
 {% endblock %}
