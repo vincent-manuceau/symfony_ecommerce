@@ -185,3 +185,9 @@ symfony console make:migration
 symfony console doctrine:migrations:migrate
 symfony console make:controller
 ```
+
+## Display User orders in his account
+AccountOrderController
+```
+symfony console make:controller
+```
