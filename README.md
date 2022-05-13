@@ -212,3 +212,12 @@ symfony console make:entity
 symfony console make:migration
 symfony console doctrine:migrations:migrate
 ```
+
+## Adding carousel
+Header entity, HeaderCrudController
+```
+symfony console make:entity
+symfony console make:migration
+symfony console doctrine:migration:migrate
+symfony console make:admin:crud
+```
