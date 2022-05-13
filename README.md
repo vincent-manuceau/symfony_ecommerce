@@ -221,3 +221,16 @@ symfony console make:migration
 symfony console doctrine:migration:migrate
 symfony console make:admin:crud
 ```
+
+## Password reset/forgotten logic
+
+ResetPassword entity, ResetPasswordController, ResetPasswordType
+``` 
+symfony console make:entity
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+symfony console make:controller
+symfony console make:form
+```
+
+
