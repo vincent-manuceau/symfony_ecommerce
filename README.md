@@ -233,4 +233,9 @@ symfony console make:controller
 symfony console make:form
 ```
 
-
+## Custom Error Page (404, ...)
+change .env dev->prod
+```
+composer require symfony/twig-pack
+symfony console cache:clear
+```
