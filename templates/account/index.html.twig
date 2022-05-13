@@ -7,7 +7,10 @@
 Bienvenue {{ app.user.firstname }} dans votre compte.<br/>Dans cet espace vous pourrez gerer toutes vos informations personnelles :
 <hr>
 <ul>
-<li><a href="{{ path('account_password') }}">Modifier mot de passe</a></li>
+    {% if is_granted('ROLE_ADMIN') %}
+    <li><a href="/admin">Acces Administrateur</a></li>
+    {% endif %}
+    <li><a href="{{ path('account_password') }}">Modifier mot de passe</a></li>
     <li><a href="{{ path('account_address') }}">Gerer mes adresses</a></li>
     <li><a href="{{ path('account_order') }}">Mes commandes</a></li>
 <hr>
