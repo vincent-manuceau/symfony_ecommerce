@@ -57,8 +57,11 @@ class ProductController extends AbstractController
             return $this->redirectToRoute('products');
         }
 
+        $best = $this->entityManager->getRepository(Product::class)->findBy(['isBest'=>1]);
+
         return $this->render('product/show.html.twig',[
-            'product' => $product
+            'product' => $product,
+            'best' => $best
         ]);
     }
 

@@ -204,3 +204,11 @@ symfony console make:entity
 symfony console make:migration
 symfony console doctrine:migrations:migrate
 ```
+
+## Adding best sales to home page + single products page 
+Add isBest to Product entity
+```
+symfony console make:entity
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+```
