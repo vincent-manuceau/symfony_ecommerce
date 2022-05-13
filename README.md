@@ -196,3 +196,11 @@ symfony console make:controller
 ```
 composer require mailjet/mailjet-apiv3-php
 ```
+
+## Adding order processing status
+Changing isPaid to state in Order repository
+```
+symfony console make:entity
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+```

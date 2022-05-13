@@ -30,12 +30,12 @@ class OrderSuccessController extends AbstractController
             return $this->redirectToRoute('home');
         }
 
-        if(!$order->getIsPaid()){
+        if($order->getState() == 0){
             //Vider le panier
             $cart->remove();
 
             //Modifier le status isPaid a 1
-            $order->setIsPaid(1);
+            $order->setState(1);
             $this->entityManager->flush();
 
             //Envoyer un mail de confirmation au client
