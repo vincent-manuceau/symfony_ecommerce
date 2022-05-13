@@ -239,3 +239,11 @@ change .env dev->prod
 composer require symfony/twig-pack
 symfony console cache:clear
 ```
+
+## Contact Form + some cosmetics ;-)
+ContactController + ContactType
+```
+symfony console make:controller
+symfony console make:form
+symfony console cache:clear
+```
